@@ -1,0 +1,29 @@
+{
+  "name": "multer-module",
+  "version": "2.0.0",
+  "description": "Template Multer File Upload",
+  "homepage": "https://github.com/DeividRobertoGA/multer-module#readme",
+  "bugs": {
+    "url": "https://github.com/DeividRobertoGA/multer-module/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeividRobertoGA/multer-module.git"
+  },
+  "license": "UNLICENSED",
+  "author": "Deivid Roberto",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "nodemon": "nodemon app.js"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.5.2",
+    "nodemon": "^3.1.14"
+  }
+}
