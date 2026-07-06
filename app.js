@@ -10,6 +10,7 @@ import limiter from './src/config/rateLimit.config.js';
 import healthRoute from './src/routes/healt.route.js';
 
 //Importando as verificações
+import { DB } from './src/config/database.config.js';
 
 //Configurando as Variaveis de Ambiente
 dotenv.config();
@@ -38,13 +39,13 @@ app.use(healthRoute);
 try {
     console.log("API desenvolvida por Deivid Roberto".cyan);
     //Verificações
-    /*console.log("🔍 Iniciando as verificações do servidor")
+    console.log("🔍 Iniciando as verificações do servidor")
 
     console.log("🔄 Verificando a conexão com o banco de dados");
     await DB.raw('SELECT 1');
     console.log("✅ Conexão com o banco de dados estabelecida com sucesso\n".green)
 
-    console.log("✅ Todas as verificações foram concluídas com sucesso\n".green)*/
+    console.log("✅ Todas as verificações foram concluídas com sucesso\n".green)
     //Inicializando o servidor
     app.listen(PORT, () => {
         if (process.env.NODE_ENV === 'development') {

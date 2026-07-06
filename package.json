@@ -16,7 +16,13 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "nodemon": "nodemon app.js"
+    "nodemon": "nodemon app.js",
+    "migrate:make": "npx knex migrate:make --stub ./src/database/template/migration.template.js",
+    "migrate:latest": "npx knex migrate:latest",
+    "migrate:rollback": "npx knex migrate:rollback",
+    "seed:make": "npx knex seed:make --stub ./src/database/template/seed.template.js",
+    "seed:run": "npx knex seed:run",
+    "knex:init": "npm run migrate:latest && npm run seed:run"
   },
   "dependencies": {
     "colors": "^1.4.0",
@@ -24,6 +30,8 @@
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "express-rate-limit": "^8.5.2",
+    "knex": "^3.3.0",
+    "mysql2": "^3.22.5",
     "nodemon": "^3.1.14"
   }
 }
