@@ -19,7 +19,8 @@ table files {
 table share_file {
   file_id integer [ref: - files.id]
   hash varchar(20) [not null, unique]
-  name varchar(255) [not null]
+  name varchar(255) [ref: - files.name]
   created_at timestamp [not null]
+  updated_at timestamp [not null]
   expires_in timestamp [null]
 }

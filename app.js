@@ -46,7 +46,7 @@ try {
     console.log("✅ Conexão com o banco de dados estabelecida com sucesso\n".green)
 
     console.log("✅ Todas as verificações foram concluídas com sucesso\n".green)
-    //Inicializando o servidor
+        //Inicializando o servidor
     app.listen(PORT, () => {
         if (process.env.NODE_ENV === 'development') {
             console.log("🚀 Servidor rodando em modo de desenvolvimento".green);
