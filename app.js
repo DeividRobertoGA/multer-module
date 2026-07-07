@@ -9,6 +9,7 @@ import limiter from './src/config/rateLimit.config.js';
 //Importando as rotas
 import healthRoute from './src/routes/healt.route.js';
 import userRoute from './src/routes/user.route.js';
+import fileRoute from './src/routes/file.route.js';
 
 //Importando as verificações
 import { DB } from './src/config/database.config.js';
@@ -35,7 +36,8 @@ app.use(limiter);
 
 //Configurando as rotas Externas
 app.use(healthRoute);
-app.use(userRoute)
+app.use(userRoute);
+app.use(fileRoute);
 
 //Preparando para inicializar o servidor
 try {
