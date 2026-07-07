@@ -1,0 +1,41 @@
+name: multer_module
+
+services:
+  backend:
+    image: multer-module:latest
+    build:
+      context: .
+      dockerfile: Dockerfile # Nota: O padrão da comunidade é Dockerfile com "D" maiúsculo
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - DB_HOST=mysql # O environment sobrescreve/adiciona ao que vem do env_file
+    depends_on:
+      mysql:
+        condition: service_healthy
+    volumes:
+      - ./src/uploads:/app/src/uploads
+    restart: unless-stopped
+
+  mysql:
+    image: mysql:8
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_DATABASE=${DB_NAME}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      # Corrigido: Usa a ferramenta embutida do MySQL para checar se o servidor está respondendo
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mysql_data:
