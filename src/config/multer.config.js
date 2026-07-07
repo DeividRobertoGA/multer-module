@@ -5,7 +5,7 @@ import { formatName } from "../utils/formatFilename.js"
 const storage = (path) => {
     return multer.diskStorage({
         destination: (req, file, callback) => {
-            callback(null, path ? `src/private/${path}/` : 'src/private/uploads/');
+            callback(null, path ? `src/${path}/` : 'src/uploads/');
         },
         filename: function (req, file, callback) {
             const filename = file.originalname
