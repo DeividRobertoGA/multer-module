@@ -51,7 +51,7 @@ Esse projeto foi pensado para rodar 100% na docker sem depender da maquina local
 <h3 id="download">Clonando o Repositório</h3>
 
 ```bash
-git clone https://github.com/DeividRobertoGA/
+git clone https://github.com/DeividRobertoGA/multer-module.git
 cd multer-module
 ```
 
@@ -60,7 +60,19 @@ cd multer-module
 Crie o arquivo `.env` apartir do `example.env`
 
 ```yaml
+#/-------------------- Configurações do Servidor --------------------/#
+NODE_ENV=
+PORT=
+BACKEND_URL=http://localhost
+TRUST_PROXY= #Caso não tenha proxy, pode deixar em branco, comentar ou colocar false
+#https://www.lastpass.com/pt/features/password-generator
+TOKEN_KEY= #Recomendado 32 caracteres, sem caracteres especiais, apenas letras e números. Exemplo: 1234567890qwertyuiopasdfghjklzxcvbnm
 
+#/-------------------- Configurações do Banco de Dados --------------------/#
+DB_HOST=
+DB_USER=
+DB_PASSWORD=
+DB_NAME=
 ```
 
 <h2 id="starting">Iniciando o sistema</h2>
@@ -80,8 +92,8 @@ docker compose exec backend npm run knex:init
 
 <h3 id="postman">Postman</h3>
 
-Para utilizar o Postman use o nosso [Workspace](https://postman.com).
+Para utilizar o Postman use o nosso [Workspace](https://documenter.getpostman.com/view/44364866/2sBY4JwhoE).
 
 <h2 id="license">Licença</h2>
 
-Esse projeto usa a licença de **COPYRIGHT** para mais informações acesse nos arquivo de [licença](https://github.com/DeividRobertoGA/)
+Esse projeto usa a licença de **COPYRIGHT** para mais informações acesse nos arquivo de [licença](https://github.com/DeividRobertoGA/multer-module?tab=License-1-ov-file)
