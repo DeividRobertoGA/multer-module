@@ -4,6 +4,7 @@
 [EXPRESS_BADGE]: https://img.shields.io/badge/express-005CFE?style=for-the-badge&logo=express
 [KNEX_BADGE]: https://img.shields.io/badge/knex.js-orange?style=for-the-badge&logo=knex.js&logoColor=white
 [MYSQL_BADGE]: https://img.shields.io/badge/mysql-blue?style=for-the-badge&logo=mysql&logoColor=white
+[POSTMAN_BADGE]: https://img.shields.io/badge/postman-orange?style=for-the-badge&logo=postman&logoColor=white&link=https%3A%2F%2Fpostman.com%2F
 
 <h1 align="center" style="font-weight: bold;">Multer Module</h1>
 
@@ -13,6 +14,7 @@
 ![express][EXPRESS_BADGE]
 ![knex.js][KNEX_BADGE]
 ![mysql][MYSQL_BADGE]
+![postman][POSTMAN_BADGE]
 
 <details open="open">
 <summary>Índice</summary>
