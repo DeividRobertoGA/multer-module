@@ -24,7 +24,7 @@
   - [Variaveis de Ambiente](#env)
 - [Iniciando o sistema](#starting)
 - [📍Documentação da API](#documentation)
-  - [Swagger](#swagger)
+  - [Postman](#postman)
 - [Licença](#license)
 
 </details>
